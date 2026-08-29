@@ -1,0 +1,9 @@
+{
+  "name": "ai-cv-maker-client-nested-fallback",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "cd .. && vite build"
+  }
+}
