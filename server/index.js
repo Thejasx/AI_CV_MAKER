@@ -19,6 +19,15 @@ app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
+// Root Welcome Route
+app.get('/', (req, res) => {
+  res.json({
+    status: 'online',
+    message: 'AI CV Maker Express Backend API Server is Live',
+    endpoints: ['/api/health', '/api/auth', '/api/resume'],
+  });
+});
+
 // Health Check API
 app.get('/api/health', (req, res) => {
   res.json({
